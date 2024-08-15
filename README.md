@@ -1,6 +1,8 @@
 Django multiple-forgined keys CRUD Models:
 
-Tree is a natural one to many relationship chains. One Tree >>Many Branches>> One Branch, Many Group Of Leafs >> One Group Many Leafs. Of curses, there are many trees: 
+Tree is a natural one to many relationship chains. One Tree >>Many Branches>> One Branch, Many Group Of Leafs >> One Group Many Leafs.
+Of curses, there are many trees. Tree Visual Model: https://github.com/user-attachments/assets/e5345295-8740-4d7d-ab45-65b5389bc867
+
 
 Django Model: Classes: GrpLeafs, Leafs ForeignKey=GrpLeafs and related_name=groupleafs, Branch ForeignKey=GrpLeafs, Tree ForeignKey=Branch
 
