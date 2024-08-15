@@ -23,14 +23,14 @@ The API to create a tree with its associated elements utilizes the Django specia
  
 Views and Urls:
 
-tree_api/create_tree/				create_tree_view2.Create_tree_B64.as_view() ,
+Create Tree:                tree_api/create_tree/create_tree_view2.Create_tree_B64.as_view() ,
 
-tree_api/all_tree/				all_tree_viewset.Tree_ALL_View.as_view({"get":"get_all"})) ,
+Query all the trees:        tree_api/all_tree/all_tree_viewset.Tree_ALL_View.as_view({"get":"get_all"})) ,
 
-tree_api/filter_tree/ 				all_tree_viewset.Tree_ALL_View.as_view({"get":"get_with_filter"})) ,
+Filter Tree and Leaf:       tree_api/filter_tree/all_tree_viewset.Tree_ALL_View.as_view({"get":"get_with_filter"})) ,
 
-tree_api/del_leafs				all_tree_viewset.Tree_ALL_View.as_view({"post":"do_del_leafs"})) ,
+Delete Leaf:                tree_api/del_leafs/all_tree_viewset.Tree_ALL_View.as_view({"post":"do_del_leafs"})) ,
 
-tree_api/upd_branch/				all_tree_viewset.Tree_ALL_View.as_view({"post":"do_upd_branch"}))
+Update Branch:              tree_api/upd_branch/all_tree_viewset.Tree_ALL_View.as_view({"post":"do_upd_branch"}))
 
 Client APIs side: https://github.com/safwathannadeif/httpxcli
