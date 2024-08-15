@@ -3,8 +3,9 @@ from unittest import TestCase
 from django.db import models
 from django.db.models import Prefetch
 
-from apptree.models import Tree, Leafs, GrpLeafs, Branch
+from apptree.models import Tree, Branch
 from testing.tests.test_load_db import Load_Tree_TestCase
+
 '''
 Run:::   ->>>  python manage.py test testing.tests.test_prefetch_with_filters
 '''
@@ -16,19 +17,12 @@ class Grp_leaf_TestCase(TestCase):
         load.test_load_test_db()
 
     def test_tree_list(self):
-        #tree_qs = Tree.objects.prefetch_related(models.Prefetch('branchesfrk',
+        # tree_qs = Tree.objects.prefetch_related(models.Prefetch('branchesfrk',
         #                     queryset=Branch.objects.filter(models.Q(name="branch1") | models.Q(name="branch2"))))
 
-         tree_qs_all = Tree.objects.prefetch_related(Prefetch('branchesfrk__branchleafgroupfrk__groupleafs',
-                             queryset=Branch.objects.filter(models.Q(name="branch1") | models.Q(name="branch2"))))
-
-
-
-
-
-
-
-
+        tree_qs_all = Tree.objects.prefetch_related(Prefetch('branchesfrk__branchleafgroupfrk__groupleafs',
+                                                             queryset=Branch.objects.filter(
+                                                                 models.Q(name="branch1") | models.Q(name="branch2"))))
 
 # branchleafgroupfrk__groupleafs')
 

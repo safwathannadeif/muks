@@ -1,14 +1,9 @@
-
-from django.urls import path, include
-
 from django.contrib import admin
 from django.urls import path, include
 
-
-
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("tree_api/", include('apptree.urls')),      # at http://127.0.0.1:8000/api/test1
+    path("tree_api/", include('apptree.urls')),  # at http://127.0.0.1:8000/api/test1
 
 ]
 '''
