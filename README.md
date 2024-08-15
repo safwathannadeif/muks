@@ -1,3 +1,5 @@
+Django mutiple forgined keys CRUD Models:
+
 Tree is a natural  one to many relationship chain. One Tree >>Many Branches>> one Branch, Many Group Of  Leafs >>  One Group Many Leafs.
 Of curse  there are many tress: https://github.com/user-attachments/assets/e5345295-8740-4d7d-ab45-65b5389bc867
 
