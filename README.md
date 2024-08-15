@@ -7,11 +7,11 @@ Django Model: Classes: 
   
 GrpLeafs,
   
-Leafs ForeignKey=GrpLeafs and related_name=groupleafs,
+Leafs with ForeignKey=GrpLeafs and related_name=groupleafs,
   
-Branch ForeignKey=GrpLeafs, 
+Branch with ForeignKey=GrpLeafs, 
   
-Tree ForeignKey=Branch
+Tree with ForeignKey=Branch
   
 Please refer to the model classes to see the details. 
 
