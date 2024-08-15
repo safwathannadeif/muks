@@ -1,32 +1,11 @@
 Tree is a natural  one to many relationship chain. One Tree >>Many Branches>> one Branch, Many Group Of  Leafs >>  One Group Many Leafs.
-Of curse  there are many tress:
-		└───Trees
-							├───Tree1----
-													├───Branch1---
-													│   						├───Group1 of  leaf
-													│   						│   								├─── Leaf1
-							.						│   						│   								 |───  Leaf2
-							.						 .							 .
-													 .							 .
-													│   						└───Group2  of leaf ├─── Leaf1
-															 
-										 |
-						 └───Tree2----- |
-													├───Branch1---
-													│   						├───Group1 of  leaf
-													│   						│   								├─── Leaf1
-													│   						│   								 |───  Leaf2
-													 .                           .
-													 .							 .	
-													│   						└───Group2  of leaf ├─── Leaf1
-
-
+Of curse  there are many tress: https://github.com/user-attachments/assets/e5345295-8740-4d7d-ab45-65b5389bc867
 
 Django Model: Classes: 
-						GrpLeafs , 
-						Leafs ForeignKey=GrpLeafs and related_name=groupleafs ,
-						Branch ForeignKey=GrpLeafs,
-						Tree  ForeignKey=Branch
+		GrpLeafs , 
+		Leafs ForeignKey=GrpLeafs and related_name=groupleafs ,
+		Branch ForeignKey=GrpLeafs,
+		Tree  ForeignKey=Branch
 Refer to model classes 
 				
 Prefetch is used so with one hit to db to query all the hierarchy, captured and represented
@@ -39,6 +18,3 @@ tree_api/del_leafs					all_tree_viewset.Tree_ALL_View.as_view({"post":"do_del_le
 tree_api/upd_branch/				all_tree_viewset.Tree_ALL_View.as_view({"post":"do_upd_branch"}))
 
 Client APiIs side: https://github.com/safwathannadeif/httpxcli
-
-
-
