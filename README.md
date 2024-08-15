@@ -17,4 +17,4 @@ tree_api/filter_tree/ 				all_tree_viewset.Tree_ALL_View.as_view({"get":"get_wit
 tree_api/del_leafs					all_tree_viewset.Tree_ALL_View.as_view({"post":"do_del_leafs"})) ,
 tree_api/upd_branch/				all_tree_viewset.Tree_ALL_View.as_view({"post":"do_upd_branch"}))
 
-Client APiIs side: https://github.com/safwathannadeif/httpxcli
+Client APIs side: https://github.com/safwathannadeif/httpxcli
