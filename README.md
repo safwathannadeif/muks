@@ -17,7 +17,7 @@ Prefetch is used such that one hit to the database makes the query for all the h
 
 Creating a tree requires a specific order to handle the dependencies. e.g., creating a leaf requires the foreign key for the group, and creating a tree requires the foreign key for the branch. 
 The API to create a tree with its associated elements utilizes the Django special parser to facilitate the creation with the proper dependency.
- 
+ 
 Views and Urls:
 
 tree_api/create_tree/				create_tree_view2.Create_tree_B64.as_view() ,
