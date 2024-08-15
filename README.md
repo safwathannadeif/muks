@@ -6,6 +6,7 @@ Django Model: Classes:
 		Leafs ForeignKey=GrpLeafs and related_name=groupleafs ,
 		Branch ForeignKey=GrpLeafs,
 		Tree  ForeignKey=Branch
+
 Refer to model classes 
 				
 Prefetch is used so with one hit to db to query all the hierarchy, captured and represented
