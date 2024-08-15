@@ -5,13 +5,13 @@ Of curses, there are many trees. Tree Visual Model: https://github.com/user-atta
 Django Model: Classes:  
 
   
-  GrpLeafs,
+GrpLeafs,
   
-  Leafs ForeignKey=GrpLeafs and related_name=groupleafs,
+Leafs ForeignKey=GrpLeafs and related_name=groupleafs,
   
-  Branch ForeignKey=GrpLeafs, 
+Branch ForeignKey=GrpLeafs, 
   
-  Tree ForeignKey=Branch
+Tree ForeignKey=Branch
   
 Please refer to the model classes to see the details. 
 
