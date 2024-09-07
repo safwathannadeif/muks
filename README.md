@@ -1,28 +1,36 @@
-Django mutiple forgined keys CRUD Models:
+Django multiple-forgined keys CRUD Models:
 
-Tree is a natural  one to many relationship chain. One Tree >>Many Branches>> one Branch, Many Group Of  Leafs >>  One Group Many Leafs.
-Of curse  there are many tress: https://github.com/user-attachments/assets/e5345295-8740-4d7d-ab45-65b5389bc867
+A tree is a natural one to many relationship chains. One Tree >>Many Branches>> One Branch, Many Group Of Leafs >> One Group Many Leafs.
+Of curses, there are many trees. Tree Visual Model: https://github.com/user-attachments/assets/e5345295-8740-4d7d-ab45-65b5389bc867
 
-Django Model: Classes: 
-		GrpLeafs , 
-		Leafs ForeignKey=GrpLeafs and related_name=groupleafs ,
-		Branch ForeignKey=GrpLeafs,
-		Tree  ForeignKey=Branch
+Django Model: Classes:  
 
-Refer to model classes 
-				
-Prefetch is used. One hit to db makes query for all the hierarchy,captured and represented
+  
+GrpLeafs,
+  
+Leafs with ForeignKey=GrpLeafs and related_name=groupleafs,
+  
+Branch with ForeignKey=GrpLeafs, 
+  
+Tree with ForeignKey=Branch
+  
+Please refer to the model classes to see the details. 
 
+Prefetch is used such that one hit to the database makes the query for all the hierarchy. 
+
+Creating a tree requires a specific order to handle the dependencies. e.g., creating a leaf requires the foreign key for the group, and creating a tree requires the foreign key for the branch. 
+The API to create a tree with its associated elements utilizes the Django special parser to facilitate the creation with the proper dependency.
+ 
 Views and Urls:
 
-tree_api/create_tree/				create_tree_view2.Create_tree_B64.as_view() ,
+Create Tree:                tree_api/create_tree/create_tree_view2.Create_tree_B64.as_view() ,
 
-tree_api/all_tree/				all_tree_viewset.Tree_ALL_View.as_view({"get":"get_all"})) ,
+Query all the trees:        tree_api/all_tree/all_tree_viewset.Tree_ALL_View.as_view({"get":"get_all"})) ,
 
-tree_api/filter_tree/ 				all_tree_viewset.Tree_ALL_View.as_view({"get":"get_with_filter"})) ,
+Filter Tree and Leaf:       tree_api/filter_tree/all_tree_viewset.Tree_ALL_View.as_view({"get":"get_with_filter"})) ,
 
-tree_api/del_leafs				all_tree_viewset.Tree_ALL_View.as_view({"post":"do_del_leafs"})) ,
+Delete Leaf:                tree_api/del_leafs/all_tree_viewset.Tree_ALL_View.as_view({"post":"do_del_leafs"})) ,
 
-tree_api/upd_branch/				all_tree_viewset.Tree_ALL_View.as_view({"post":"do_upd_branch"}))
+Update Branch:              tree_api/upd_branch/all_tree_viewset.Tree_ALL_View.as_view({"post":"do_upd_branch"}))
 
 Client APIs side: https://github.com/safwathannadeif/httpxcli
